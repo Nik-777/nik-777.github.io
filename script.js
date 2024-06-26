@@ -18,6 +18,9 @@ const changeImage = function() {
 
 }
 
+
+ 
+
 const buttonEl = document.querySelector("#image-changer");
 buttonEl.addEventListener("click",changeImage);
 
