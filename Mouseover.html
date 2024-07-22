@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+    <title>Mouseover</title>
+    <style>
+        {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            background-color: aqua;
+
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        #box-1 {
+            top: 200px;
+            left: 200px;
+        }
+
+        #box-2 {
+            top: 400px;
+            left: 400px;
+        }
+
+        #box-3 {
+            top: 600px;
+            left: 600px;
+        }
+
+        .follow-cursor,
+        .info {
+            position: absolute;
+            background-color: aliceblue;
+            color: antiquewhite;
+            border-radius: 0px;
+            padding: 10px 20px;
+            display: none;
+
+        }
+
+        .follow-cursor {
+            position: absolute;
+        }
+
+
+        .info {
+            position: fixed;
+            bottom: 0;
+            left: 50px;
+            transform: translate(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box red" id="box-1"></div>
+    <div class="box blue" id="box-2"></div>
+    <div class="box green" id="box-3"></div>
+
+    <div class="follow-cursor">Nothing here</div>
+    <div class="info">No information</div>
+
+    <script type="type/javascript">
+        var boxes = 
+        { 
+            elId: "box-1",
+                mouseDesc: 'in red box',
+        },
+        {
+            elId: "box-1",
+                mouseDesc: 'in red box',
+        },
+        {
+            elId: "box-1",
+                mouseDesc: 'in red box',
+
+        }
+
+        var boxEls = document.querySelectorAll(".box");
+        var cursorEl = document.querySelector(".follow-cursor");
+        var infoEl = document.querySelector(".info");
+        boxEls.forEach
+
+    </script>
+
+
+</body>
