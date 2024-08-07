@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USSR Housing Renewal</title>
+    <link rel="stylesheet" href="Thesis-Site-Style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@google/model-viewer@latest/dist/model-viewer.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .menu-icon {
+            display: none;
+            /* Hide menu icon for now */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .content-section {
+            margin-bottom: 40px;
+        }
+
+        .content-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+
+        .content-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #7f8c8d;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 400px;
+            margin: 20px 0;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .card-back {
+            background-color: #ecf0f1;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotateY(180deg);
+        }
+
+        .slide-text {
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 500px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        footer nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">USSR Housing Renewal</div>
+        <h1>Revitalizing Soviet Architecture</h1>
+        <div class="menu-icon">&#9776;</div>
+    </header>
+    <main>
+        <section class="content-section">
+            <h2>Project Overview</h2>
+            <p>Explore the transformation of Soviet-era housing into modern, sustainable living spaces. Our project
+                delves into the historical significance, design innovations, and future prospects of housing renewal.
+            </p>
+            <model-viewer src="assets/test.glb" alt="3D Model of Housing Project" auto-rotate camera-controls
+                background-color="#FFFFFF"></model-viewer>
+        </section>
+        <section class="content-section">
+            <h2>Innovative Additions</h2>
+            <p>Discover the cutting-edge features and design elements incorporated into the housing renovations. From
+                modern amenities to energy-efficient solutions, learn how we're redefining urban living.</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://via.placeholder.com/600x400" alt="Slide 1">
+                                </div>
+                                <div class="card-back">
+                                    <div class="slide-text">Innovative Design Feature 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://via.placeholder.com/600x400" alt="Slide 2">
+                                </div>
+                                <div class="card-back">
+                                    <div class="slide-text">Innovative Design Feature 2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://via.placeholder.com/600x400" alt="Slide 3">
+                                </div>
+                                <div class="card-back">
+                                    <div class="slide-text">Innovative Design Feature 3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://via.placeholder.com/600x400" alt="Slide 4">
+                                </div>
+                                <div class="card-back">
+                                    <div class="slide-text">Innovative Design Feature 4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://via.placeholder.com/600x400" alt="Slide 5">
+                                </div>
+                                <div class="card-back">
+                                    <div class="slide-text">Innovative Design Feature 5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section">
+            <h2>Groundscape Integration</h2>
+            <p>Learn about the integration of green spaces and landscape design in our renovation projects. Emphasis is
+                placed on creating harmonious living environments that blend architecture with nature.</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://via.placeholder.com/600x400" alt="Slide 1">
+                                </div>
+                                <div class="card-back">
+                                    <div class="slide-text">Groundscape Feature 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://via.placeholder.com/600x400" alt="Slide 2">
+                                </div>
+                                <div class="card-back">
+                                    <div class="slide-text">Groundscape Feature 2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://via.placeholder.com/600x400" alt="Slide 3">
+                                </div>
+                                <div class="card-back">
+                                    <div class="slide-text">Groundscape Feature 3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://via.placeholder.com/600x400" alt="Slide 4">
+                                </div>
+                                <div class="card-back">
+                                    <div class="slide-text">Groundscape Feature 4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://via.placeholder.com/600x400" alt="Slide 5">
+                                </div>
+                                <div class="card-back">
+                                    <div class="slide-text">Groundscape Feature 5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="Thesis-Site-01-Home.html">Home</a>
+            <a href="Thesis-Site-02-History.html">History</a>
+            <a href="Thesis-Site-03-Site.html">Site Context</a>
+            <a href="Thesis-Site-04-Project.html">The Project</a>
+        </nav>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="Thesis-Site-Java.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiperContainers = document.querySelectorAll('.swiper-container');
+            swiperContainers.forEach(container => {
+                new Swiper(container, {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    loop: true,
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

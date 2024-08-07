@@ -1,31 +1,46 @@
-const changeImage = function() {
-    const imageEl = document.querySelector("#coord-image");
-    console.log(imageEl) ;
-    console.log(imageEl.src) ;
-    
-    const xInputEl = document.querySelector("#x-changer");
-    const yInputEl = document.querySelector("#y-changer");
-    
-    const xCoord=xInputEl.value;
-    const yCoord=yInputEl.value;
+// script.js
 
-    //const imagesrc="images/out256_" + xCoord + "_" + yCoord + ".jpg";
-    const imageSrc = `images/out256_${xCoord}_${yCoord}.jpg`;
+const header = document.getElementById('header');
+const footer = document.getElementById('footer');
+const loadingScreen = document.getElementById('loadingScreen');
 
-    imageEl.src = imageSrc;
+// Change these values to match the visible amounts in CSS
+const headerVisibleAmount = '30px'; 
+const footerVisibleAmount = '30px';
 
+document.body.addEventListener('mousemove', (e) => {
+    if (e.clientY < 100) {
+        header.style.top = '0'; // Header fully visible
+    } else {
+        header.style.top = `-${headerVisibleAmount}`; // Adjusted for partial visibility
+    }
 
+    if (window.innerHeight - e.clientY < 100) {
+        footer.style.bottom = '0'; // Footer fully visible
+    } else {
+        footer.style.bottom = `-${footerVisibleAmount}`; // Adjusted for partial visibility
+    }
+});
 
-}
+// Initialize Swiper
+const swiper = new Swiper('.swiper-container', {
+    loop: false,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
-
- 
-
-const buttonEl = document.querySelector("#image-changer");
-buttonEl.addEventListener("click",changeImage);
-
-const xInputEl = document.querySelector("#x-changer");
-xInputEl.addEventListener("input",changeImage);
-
-const yInputEl = document.querySelector("#y-changer");
-yInputEl.addEventListener("input",changeImage);
+// Loading screen logic
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }, 2000);
+});
