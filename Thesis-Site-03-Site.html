@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USSR Housing Renewal</title>
+    <style>
+        /* Base styles */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        * {
+            box-sizing: inherit;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin: 0;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+            overflow: auto;
+            margin-bottom: 80px;
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .content-section h2 {
+            font-size: 2em;
+            color: #4e54c8;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Box around Image Comparison Slider */
+        .img-comp-box {
+            width: 1100px; /* Set width of box */
+            height: 800px; /* Set height of box */
+            border: 2px solid #4e54c8;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        /* Image Comparison Slider */
+        .img-comp-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 1360px; /* Adjusted to fit within the box */
+            margin: 0 auto;
+        }
+
+        .img-comp-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .img-comp-slider {
+            position: absolute;
+            z-index: 9;
+            cursor: ew-resize;
+            width: 40px;
+            height: 40px;
+            background-color: #2196F3;
+            opacity: 0.7;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        footer nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        footer nav a:hover {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>USSR Housing Renewal</h1>
+    </header>
+    <main>
+        <section class="content-section">
+            <h2>The Site</h2>
+            <p>The site researched was KIM Street, Volgograd, 400001. Specifically, buildings 10A, 12, 12A, and 14A. These are highlighted below in the red box. Slide to view the after and before between the changes. The pink are the additions made to the existing buildings. This site houses over 200 units, and makes for a perfect candidate for rebuilding. These additions can be applied to one or more buildings, whether it is in a complex or singular throughout the country.  </p>
+        </section>
+        
+        <section class="content-section">
+            <div class="img-comp-box">
+                <div class="img-comp-container">
+                    <div class="img-comp-img">
+                        <img src="assets/SiteNew-images-0.jpg" width="1100" height="800">
+                    </div>
+                    <div class="img-comp-img img-comp-overlay">
+                        <img src="assets/SiteNew-images-1.jpg" width="1100" height="800">
+                    </div>
+                    <div class="img-comp-slider"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <p>These four building create three different approaches to this case study. One, a cantilever addition, two, a bridge addition, and three, a connecting addition. These will not only give about 1.5 times the space per unit (by law), but also include amenities, views, and structural additions. </p>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="Thesis-Site-01-Home.html">Home</a>
+            <a href="Thesis-Site-01.1-Process.html">Process</a>
+            <a href="Thesis-Site-02-History.html">History</a>
+            <a href="Thesis-Site-03-Site.html">Site Context</a>
+            <a href="Thesis-Site-04-Project.html">The Project</a>
+        </nav>
+    </footer>
+    <script>
+        function initComparisons() {
+            var x, i;
+            x = document.getElementsByClassName("img-comp-overlay");
+            for (i = 0; i < x.length; i++) {
+                compareImages(x[i]);
+            }
+
+            function compareImages(img) {
+                var slider, img, clicked = 0, w, h;
+                w = img.offsetWidth;
+                h = img.offsetHeight;
+                img.style.width = (w / 2) + "px";
+                slider = document.querySelector(".img-comp-slider");
+                slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+                slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+
+                slider.addEventListener("mousedown", slideReady);
+                window.addEventListener("mouseup", slideFinish);
+                slider.addEventListener("touchstart", slideReady);
+                window.addEventListener("touchend", slideFinish);
+
+                function slideReady(e) {
+                    e.preventDefault();
+                    clicked = 1;
+                    window.addEventListener("mousemove", slideMove);
+                    window.addEventListener("touchmove", slideMove);
+                }
+
+                function slideFinish() {
+                    clicked = 0;
+                }
+
+                function slideMove(e) {
+                    var pos;
+                    if (clicked == 0) return false;
+                    pos = getCursorPos(e);
+                    if (pos < 0) pos = 0;
+                    if (pos > w) pos = w;
+                    slide(pos);
+                }
+
+                function getCursorPos(e) {
+                    var a, x = 0;
+                    e = (e.changedTouches) ? e.changedTouches[0] : e;
+                    a = img.getBoundingClientRect();
+                    x = e.pageX - a.left;
+                    x = x - window.pageXOffset;
+                    return x;
+                }
+
+                function slide(x) {
+                    img.style.width = x + "px";
+                    slider.style.left = img.style.width;
+                }
+            }
+        }
+
+        initComparisons();
+    </script>
+</body>
+
+</html>

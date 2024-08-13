@@ -1,85 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USSR Housing Renewal</title>
-    <link rel="stylesheet" href="Thesis-Site-Style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #fff;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .content {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 56.25%;
+            /* Aspect ratio for video, can be adjusted */
+        }
+
+        .content img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-overlay {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .content-section {
+            height: 200vh;
+            /* Ensures the section is long enough for scrolling */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .content-section.sticky {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .content-section.sticky img {
+            transition: transform 1.5s ease-in-out;
+        }
+
+        .content-section.sticky .text-overlay {
+            transition-delay: 1s;
+            opacity: 1;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        footer nav a:hover {
+            color: #ffcc00;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <div class="logo">LOGO</div>
         <h1>USSR Housing Renewal</h1>
-        <div class="menu-icon">&#9776;</div>
     </header>
     <main>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <img src="https://via.placeholder.com/600x400" alt="Slide 1">
-                            </div>
-                            <div class="card-back">
-                                <div class="slide-text">Text for Slide 1</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <img src="https://via.placeholder.com/600x400" alt="Slide 2">
-                            </div>
-                            <div class="card-back">
-                                <div class="slide-text">Text for Slide 2</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <img src="https://via.placeholder.com/600x400" alt="Slide 3">
-                            </div>
-                            <div class="card-back">
-                                <div class="slide-text">Text for Slide 3</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <img src="https://via.placeholder.com/600x400" alt="Slide 4">
-                            </div>
-                            <div class="card-back">
-                                <div class="slide-text">Text for Slide 4</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="content-section sticky">
+            <div class="content">
+                <img src="assets/Image1.jpg" alt="Image 1">
+                <div class="text-overlay">This project aims to create a case study to redesign almost 2million units in the former USSR. Using Soviet inspired architecture, combined with new amenities and living imporvements, this is a take on how we can keep the culture and antiquity of the first social housing projects of the Soviet Union, while creating a much more exciting and modern way of living.</div>
             </div>
-        </div>
+        </section>
+
+        <section class="content-section sticky">
+            <div class="content">
+                <img src="assets/Image2.jpg" alt="Image 2">
+                <div class="text-overlay">Rendering of Building 10A. A close-up of what it is like underneath the
+                    addition. Featuring a monolithic style structure as the core, open circulation, and a unique
+                    structural system.</div>
+            </div>
+        </section>
+
+        <section class="content-section sticky">
+            <div class="content">
+                <img src="assets/Image3.jpg" alt="Image 3">
+                <div class="text-overlay">The purpose of this case study is to see a modern take on old design. The goal is to keep perfectly calculated environment while delivering more room to live, and a much longer building life cycle. </div>
+            </div>
+        </section>
     </main>
     <footer>
         <nav>
             <a href="Thesis-Site-01-Home.html">Home</a>
+            <a href="Thesis-Site-01.1-Process.html">Process</a>
             <a href="Thesis-Site-02-History.html">History</a>
             <a href="Thesis-Site-03-Site.html">Site Context</a>
             <a href="Thesis-Site-04-Project.html">The Project</a>
         </nav>
     </footer>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="Thesis-Site-Java.js"></script>
 </body>
+
 </html>
